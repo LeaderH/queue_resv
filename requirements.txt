@@ -1,0 +1,8 @@
+mesop
+pymongo
+fastapi
+uvicorn
+bcrypt
+requests
+python-dotenv
+pydantic
