@@ -267,7 +267,7 @@ def render_form_page():
 
             me.button("Submit", on_click=on_submit_reservation, type="flat")
 
-@me.page(path="/")
+@me.page(path="/", stylesheets=["/fonts.css"])
 def app():
     state = me.state(State)
     if not state.is_logged_in:
