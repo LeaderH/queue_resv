@@ -259,8 +259,8 @@ def render_form_page():
             me.input(label="Project Name *", key="project_name", on_blur=on_input_change, value=state.project_name)
             me.input(label="Allowed Users (comma-separated)", key="allowed_users", on_blur=on_input_change, value=state.allowed_users)
             me.input(label="Job Count *", key="job_count", on_blur=on_number_change, value=str(state.job_count) if state.job_count else "0", type="number")
-            me.input(label="Start Date (YYYY-MM-DD) *", key="start_date", on_blur=on_input_change, value=state.start_date)
-            me.input(label="Expire Date (YYYY-MM-DD) *", key="expire_date", on_blur=on_input_change, value=state.expire_date)
+            me.input(label="Start Date *", key="start_date", on_blur=on_input_change, value=state.start_date, type="date")
+            me.input(label="Expire Date *", key="expire_date", on_blur=on_input_change, value=state.expire_date, type="date")
 
             if state.form_message:
                 me.text(state.form_message, style=me.Style(color="red" if "exceeded" in state.form_message or "must be" in state.form_message or "Invalid" in state.form_message or "Please" in state.form_message else "green"))
